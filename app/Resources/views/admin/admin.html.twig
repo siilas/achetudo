@@ -1,1 +1,46 @@
 {% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="row topo">
+        <div class="col-md-12">
+            <img src="img/logo.png" onclick="irParaHome();" class="img-responsive" alt="Ache tudo!">
+        </div>
+    </div>
+
+    <div class="row form-login">
+    	<form class="form-inline">
+    		{{ form_widget(form) }}
+    	</form>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 rodape">
+            <img src="img/logo2.png" alt="Ache tudo!">
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <style type="text/css">
+        .topo {
+            padding-top: 2.5rem !important;
+            padding-bottom: 2.5rem !important;
+            height: 200px !important;
+        	text-align: center;
+        }
+
+        .topo img {
+            cursor: pointer;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .rodape, .form-login {
+            text-align: center;
+        }
+
+        .form-login {
+        	padding-bottom: 2.5rem !important;
+        }
+    </style>
+{% endblock %}
