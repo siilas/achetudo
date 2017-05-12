@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="row topo">
+        <div class="col-md-6">
+            <img src="/img/logo.png" onclick="irParaHome();" class="img-responsive pull-right" alt="Ache tudo!">
+        </div>
+        <div class="col-md-6">
+            <form id="form" name="form" class="campo-busca" action="/buscar">
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control col-sm-10" name="q" placeholder="O que você está buscando?" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+    	<div class="col-md-8 col-md-offset-2">
+    		<h1>{{cadastro.titulo}}</h1>
+
+    		<p>em {{cadastro.categoria}}</p>
+
+    		<p>Sobre: {{cadastro.descricao}}</p>
+
+    		<p>Telfone: {{cadastro.telefone}}</p>
+
+    		<p>Endereço: {{cadastro.endereco}}</p>
+
+    		<p>CEP: {{cadastro.cep}}</p>
+
+    		<p>Cidade: {{cadastro.cidade}}</p>
+
+    		<p>Estado: {{cadastro.estado}}</p>
+    	</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 rodape">
+            <img src="/img/logo2.png" alt="Ache tudo!">
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .topo {
+            padding-top: 2.5rem !important;
+            padding-bottom: 2.5rem !important;
+            height: 150px !important;
+        }
+
+        .topo img {
+        	cursor: pointer;
+        }
+
+        .campo-busca {
+            width: 90% !important;
+            padding-top: 2.5rem !important;
+        }
+
+        .rodape {
+            text-align: center;
+        }
+    </style>
+{% endblock %}

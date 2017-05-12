@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="row topo">
+        <div class="col-md-6">
+            <img src="../img/logo.png" onclick="irParaHome();" class="img-responsive pull-right" alt="Ache tudo!">
+        </div>
+        <div class="col-md-6 botoes">
+        	<div class="row pull-right">
+	        	<div class="col-md-5">
+		        	<form name="form-cadastrar" action="cadastro">
+		                <button class="btn btn-primary btn-lg" type="submit">
+		                    Cadastrar
+		                </button>	
+		            </form>
+	            </div>
+	            <div class="col-md-5">
+		            <form name="form-sair" action="sair">
+		                <button class="btn btn-danger btn-lg" type="submit">
+		                    Sair
+		                </button>	
+		            </form>
+	            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+        	{% if cadastros is empty %}
+        		<p class="lead msg">Sem cadastros.</p>
+        	{% else %}
+        		<table class="table table-hover">
+        			<thead>
+        				<tr>
+        					<th>Código</th>
+        					<th>Título</th>
+        					<th></th>
+        				</th>
+        			</thead>
+        			<tbody>
+    	        		{% for cadastro in cadastros %}
+    	            		<tr>
+    		            		<td>{{cadastro.id}}</td>
+    		            		<td>{{cadastro.titulo}}</td>
+    		            		<td class="botoes-tabela">
+                                    <form action="/admin/cadastro/editar/{{cadastro.id}}">
+    			            		   <button type="submit" class="btn btn-primary">Editar</button>
+                                    </form>
+                                    <form action="/admin/cadastro/excluir/{{cadastro.id}}">
+    			            		   <button type="submit" class="btn btn-danger">Excluir</button>
+                                    </form>
+    		  					</td>
+    	  					</tr>
+    	        		{% endfor %}
+            		</tbody>
+        		</table>
+        	{% endif %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 rodape">
+            <img src="../img/logo2.png" alt="Ache tudo!">
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <style type="text/css">
+        .topo {
+            padding-top: 2.5rem !important;
+            padding-bottom: 2.5rem !important;
+            height: 250px !important;
+        }
+
+        .topo img {
+            cursor: pointer;
+        }
+
+        .botoes {
+            padding-top: 2.5rem !important;
+        }
+
+        .msg {
+        	padding-bottom: 2.5rem !important;
+        }
+
+        .botoes button {
+        	margin-left: 10px;
+        	margin-right: 10px;
+        }
+
+        .rodape, .msg {
+            text-align: center;
+        }
+
+        .botoes-tabela {
+            display: flex;
+        }
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+        function irParaHome() {
+            window.location.href = "/";
+        }
+    </script>
+{% endblock %}

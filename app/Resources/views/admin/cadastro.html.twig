@@ -1,1 +1,139 @@
 {% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="row topo">
+        <div class="col-md-6">
+            <img src="/img/logo.png" onclick="irParaHome();" class="img-responsive pull-right" alt="Ache tudo!">
+        </div>
+        <div class="col-md-6 botoes">
+        	<div class="row pull-right">
+	        	<div class="col-md-5">
+		        	<form name="form-cadastrar" action="cadastro">
+		                <button class="btn btn-primary btn-lg" type="submit">
+		                    Cadastrar
+		                </button>	
+		            </form>
+	            </div>
+	            <div class="col-md-5">
+		            <form name="form-sair" action="sair">
+		                <button class="btn btn-danger btn-lg" type="submit">
+		                    Sair
+		                </button>	
+		            </form>
+	            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+    	<div class="col-md-8 col-md-offset-2">
+    		<form id="form" name="form" class="form-horizontal" action="/admin/cadastro/salvar" method="post">
+    			<fieldset>
+    				<legend>Cadastro</legend>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" readonly="readonly" class="form-control" name="id" placeholder="Código" value="{{cadastro.id}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="titulo" placeholder="Título" value="{{cadastro.titulo}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="telefone" placeholder="Telefone" value="{{cadastro.telefone}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="endereco" placeholder="Endereço" value="{{cadastro.endereco}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="cep" placeholder="CEP" value="{{cadastro.cep}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="cidade" placeholder="Cidade" value="{{cadastro.cidade}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="estado" placeholder="Estado" value="{{cadastro.estado}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="descricao" placeholder="Descrição" value="{{cadastro.descricao}}" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" name="categoria" placeholder="Categoria" value="{{cadastro.categoria}}" />
+                        </div>
+                    </div>
+
+    				<div class="form-action">
+                        <div class="col-sm-12 botoes-form">
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </div>
+    			</fieldset>
+    		</form>
+    	</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 rodape">
+            <img src="/img/logo2.png" alt="Ache tudo!">
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <style type="text/css">
+        .topo {
+            padding-top: 2.5rem !important;
+            padding-bottom: 2.5rem !important;
+            height: 250px !important;
+        }
+
+        .topo img {
+            cursor: pointer;
+        }
+
+        .botoes {
+            padding-top: 2.5rem !important;
+        }
+
+        .botoes button {
+        	margin-left: 10px;
+        	margin-right: 10px;
+        }
+
+        .rodape, .botoes-form {
+            padding-top: 2.5rem !important;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript">
+        function irParaHome() {
+            window.location.href = "/";
+        }
+    </script>
+{% endblock %}
