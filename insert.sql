@@ -1,0 +1,31 @@
+INSERT INTO ADMIN (USUARIO, SENHA) VALUES ('admin', '123');
+
+INSERT INTO CADASTRO(TITULO, TELEFONE, ENDERECO, CEP, CIDADE, ESTADO, DESCRICAO, CATEGORIA) 
+VALUES ('Pizzaria Nova', 1432234399, 'Rua Brasil', 18680000, 'Bauru', 'SP', 'Melhor pizza da cidade', 'Pizza');
+
+INSERT INTO CADASTRO(TITULO, TELEFONE, ENDERECO, CEP, CIDADE, ESTADO, DESCRICAO, CATEGORIA) 
+VALUES ('Play Games', 1432234384, 'Rua Alemanha', 18680001, 'Bauru', 'SP', 'Games para todos os gostos', 'Games');
+
+INSERT INTO CADASTRO(TITULO, TELEFONE, ENDERECO, CEP, CIDADE, ESTADO, DESCRICAO, CATEGORIA) 
+VALUES ('Restaurante Azul', 1432234584, 'Rua Inglaterra', 18680002, 'Bauru', 'SP', 'Melhor comida da cidade', 'Comida');
+
+INSERT INTO CADASTRO(TITULO, TELEFONE, ENDERECO, CEP, CIDADE, ESTADO, DESCRICAO, CATEGORIA) 
+VALUES ('Lojas Mil', 1432234564, 'Rua Irlanda', 18680003, 'Bauru', 'SP', 'Tudo o que você procura', 'Lojas');
+
+INSERT INTO CADASTRO(TITULO, TELEFONE, ENDERECO, CEP, CIDADE, ESTADO, DESCRICAO, CATEGORIA) 
+VALUES ('Soccer Dez', 1432234309, 'Rua Argentina', 18680004, 'Bauru', 'SP', 'Venha jogar com a gente', 'Esportes');
+
+INSERT INTO CADASTRO(TITULO, TELEFONE, ENDERECO, CEP, CIDADE, ESTADO, DESCRICAO, CATEGORIA) 
+VALUES ('Academia Fitness', 1432234378, 'Rua Uruguai', 18680005, 'Bauru', 'SP', 'Entre em forma com a gente', 'Esportes');
+
+INSERT INTO CADASTRO(TITULO, TELEFONE, ENDERECO, CEP, CIDADE, ESTADO, DESCRICAO, CATEGORIA) 
+VALUES ('Bar do Zé', 1432234376, 'Rua Peru', 18680006, 'Bauru', 'SP', 'A cerveja mais barata da cidade', 'Bares');
+
+INSERT INTO CADASTRO(TITULO, TELEFONE, ENDERECO, CEP, CIDADE, ESTADO, DESCRICAO, CATEGORIA) 
+VALUES ('Faculdade da Cidade', 1432234312, 'Rua Estados Unidos', 18680007, 'Bauru', 'SP', 'Descontos especiais para você', 'Educação');
+
+INSERT INTO CADASTRO(TITULO, TELEFONE, ENDERECO, CEP, CIDADE, ESTADO, DESCRICAO, CATEGORIA) 
+VALUES ('Papelaria Mais', 1432234332, 'Rua China', 18680008, 'Bauru', 'SP', 'Descontos em cadernos', 'Lojas');
+
+INSERT INTO CADASTRO(TITULO, TELEFONE, ENDERECO, CEP, CIDADE, ESTADO, DESCRICAO, CATEGORIA) 
+VALUES ('Calçados Pé', 1432234343, 'Rua Cuba', 18680009, 'Bauru', 'SP', 'Calçados para todos', 'Calçados');
