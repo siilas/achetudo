@@ -132,6 +132,37 @@
 
 {% block javascripts %}
     <script type="text/javascript">
+        $(document).ready(function() {
+            $("#form").validate({
+                rules: {
+                    titulo: {
+                        required: true
+                    },
+                    telefone: {
+                        required: true
+                    },
+                    endereco: {
+                        required: true
+                    },
+                    cep: {
+                        required: true
+                    },
+                    cidade: {
+                        required: true
+                    },
+                    estado: {
+                        required: true
+                    },
+                    descricao: {
+                        required: true
+                    },
+                    categoria: {
+                        required: true
+                    }
+                }
+            });
+        });
+
         function irParaHome() {
             window.location.href = "/";
         }
